@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <h1>Student Regestration</h1>
+        <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email"><br><br>
+                <label for="Password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password"><br><br>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob"required><br><br>
+                <label for="phone NUmber">Contact Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your number"><br><br>
+                <label for ="time">Time</label>
+                <input type="time" id="time" name="time" required><br><br>
+                <p>Gender:</p>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label><br>
+                <input type="radio" id="other" name="gender" value="other" required>
+                <label for="other">Other</label><br>
+            </fieldset>
+            <fieldset>
+            <legend>Academic Information</legend>
+            <label for="course"> Select Course:</label>
+            <select id="course" name="course" required>
+                <option value="">--Select a course--</option>
+                <option value="BCA">BCA</option>
+                <option value="MCA">MCA</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="M.Tech">M.Tech</option>
+            </select><br><br>
+            <label for = "Programming Language">Select Programming Language:</label></br>
+            <select id="programming" name="programming" multiple size="3">
+                <option value="HTML">HTML</option>
+                <option value="C">C</option>
+                <option value="C++">C++</option>
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+            </select><br><br>
+            <label for ="Age">Age:</label>
+            <input type="number" id="age" name="age" required placeholder="Enter your age"><br><br>
+            <label for="Skill">Programming Skills</label>
+            <input type="range" min="0" max="100" id="skill" name="skill"><br><br>
+            <label for ="city">City:</label>
+            <input type="text" id="city" name="city"  list="cities" required><br><br>
+            <datalist id="cities">
+                <option value="New York">
+                <option value="Los Angeles">
+                <option value="Chicago">
+                <option value="Houston">
+                <option value="Phoenix">
+        </fieldset>
+        <fieldset>
+            <legend>Address</legend>
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" required placeholder="Enter your address"></textarea><br><br>
+            <label for="zip">Pin Code:</label>
+            <input type="text" id="Pin" name="Pin" required placeholder="Enter your Pin code"><br><br>
+            </fieldset>
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for = "phone">Phone Number</label>
+                <input type="tel"id="phone" nmae="phone" required placeholder="Enter your phone number"><br><br>
+            </fieldset>
+            <fieldset>
+                <legend>Skill and Interest</legend>
+                <label for="skill">Skill Level:</label>
+                <input type="range" id="skill" name="skill" min="0" max="10000"><br><br>
+                <label for="interest">Interest:</label><br>
+                <input type="checkbox" id="interest1" name="interest">
+                <label for="interest1">JAVA</label><br>
+                <input type="checkbox" id="interest2" name="interest">
+                <label for="interest2">HTML</label><br>
+                <input type="checkbox" id="interest3" name="interest" >
+                <label for="interest3">CSS</label><br>
+                <input type="checkbox" id="interest4" name="interest" >
+                <label for="interest4">Other</label><br><br>
+                <label for="color">Color</label>
+                <input type="color" id="color" name="color"><br><br>
+                <label for="url">Website URL:</label>
+                <input type="url" id="url" name="url" placeholder="Enter your website URL"><br><br>
+            </fieldset>
+            <fieldset>
+                <legend>File Upload</legend>
+                <label for="Resume">Resume</label>
+                <input type="resume" id="resume" name="resume" accept=".pdf"><br><br>
+                <label for="Image">Image</label>
+                <input type="file" id="Image" name="Image" accept=".jpg, .jpeg, .png"><br><br>
+            </fieldset>
+            <fieldset>
+                <legend>confirmation</legend>
+                <input type="checkbox" id="confirmation" name="confirmation" required>
+                <label for="confirmation">I confirm that the information provided is accurate.</label><br><br>
+            <input type="checkbox" id="confirm2" name="confirm2" required>
+                <label for="confirm2">I agree to the terms and conditions.</label><br><br>
+            </fieldset>
+            <button type="submit"> Regestration Submit</button>
+             <button type="reset">Reset Button</button>   
+             <button type="button">Normal button</button>
+        </form>
+    </body>
+</html>
