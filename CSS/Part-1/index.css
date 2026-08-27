@@ -1,0 +1,16 @@
+#heading1{
+    color: antiquewhite;
+}
+#heading2{
+    color: black;
+}
+p{
+    color:rgb(129, 179, 111) ;
+}
+body{
+    background-color: burlywood;
+}
+button{
+    color:rgb(22, 114, 57) ;
+    background-color:red;
+}
