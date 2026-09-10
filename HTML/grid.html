@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Document</title>
+        <style>
+
+            div{
+                width: 100vw;
+                height:100vw;
+                display: grid;
+                grid-template-columns: 1fr 5fr;
+                grid-template-rows: 1fr 5fr;
+                grid-template-areas: "sidebar header"
+                                     "sidebar main";
+            }
+            header{
+                grid-area: header;
+                background-color: lightblue;
+            }
+            aside{
+                grid-area: sidebar;
+                background-color: lightgreen;
+            }
+            main{
+                grid-area: main;
+                background-color: lightcoral;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <header></header>
+            <aside></aside>
+            <main></main>
+        </div>
+    </body>
+</html>
