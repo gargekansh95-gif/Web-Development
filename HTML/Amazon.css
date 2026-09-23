@@ -1,0 +1,95 @@
+*{
+    margin: 0px;
+}
+
+header{
+    width: 100vw;
+    height:80rem;
+    display: flex;
+    padding: 30px;
+    font-size: 20px;
+    gap: 10px;
+    justify-content: center;
+    background-color: beige;
+}
+
+#inputbox{
+    display: flex;
+}
+
+header input{
+    width:30rem;
+}
+
+nav{
+    width:100vw;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 15px;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+.cards{
+    margin-top: 45px;
+    display: flex;
+    gap:30px;
+    overflow-x: scroll;
+}
+
+article{
+    border-radius: 30px;
+    flex-shrink: 0;
+    width:300px;
+    height:400px;
+    background-color: black;
+}
+
+.cards2{
+    width:100vw;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:30px 0;
+    padding:0;
+}
+
+.cards2art{
+    width:300px;
+    height:400px;
+}
+
+.img-section{
+    display:grid;
+    width:100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.img-section div{
+    background-color: bisque;
+    color:black;
+    height:100px;
+}
+.cta{
+    width:100px;
+    border-top:2px slateblue
+    border-bottom:2px solid black;
+    height:60px;
+    display:flex;
+    justify-content: center;
+    align-item:center;
+    flex-direction:column;
+    margin-bottom:30px;
+}
+footer{
+    height:600px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
+    
+
+
+}

@@ -1,0 +1,107 @@
+```html
+<html>
+<head>
+    <title>Birthdaydoor</title>
+
+    <style>
+        main {
+            width: 600px;
+            height: 700px;
+            margin: auto;
+            margin-top: 30px;
+            box-shadow: inset 0 0 15px 5px rgba(255,0,0,0.4);
+            position: relative;
+            margin-bottom: 50px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        article {
+            background-color: pink;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 2s ease;
+        }
+
+        article h1 {
+            font-size: 50px;
+            color: brown;
+            margin-bottom: 0px;
+        }
+
+        article p {
+            font-size: 25px;
+            color: red;
+        }
+
+        section {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        section div {
+            flex: 1;
+            height: 100%;
+            background: linear-gradient(brown, red, brown);
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            transition: transform 5s ease;
+        }
+
+        section div a {
+            display: inline-block;
+            border-radius: 50%;
+            border: 2px solid black;
+            width: 20%;
+            height: 20%;
+            background-color: goldenrod;
+        }
+
+        #main:target .door1 {
+            transform: translateX(-100%);
+        }
+
+        #main:target .door2 {
+            transform: translateX(100%);
+        }
+
+        #main:target article {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main id="main">
+
+        <article>
+            <h1>Happy Birthday</h1>
+            <p>Wishing you a day full of happiness and joy</p>
+        </article>
+
+        <section>
+            <div class="door1"></div>
+
+            <div class="door2">
+                <a href="#main"></a>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
