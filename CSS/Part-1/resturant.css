@@ -3,5 +3,10 @@ body{
     background-color: bisque;
     font-family:Arial;
 }
-
+header{
+    color:blue;
+}
+p{
+    color:black;
+}
 
