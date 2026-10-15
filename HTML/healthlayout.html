@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Health Care</title>
+        <style>
+            *{
+                margin: 0px;
+            }
+            header{
+                width: 100vw;
+                height:100px;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                padding:10px;
+                justify-content: space-between;
+                background-color:bisque;
+            }
+            .switch{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height:80px;
+                width:80px;
+                gap:5px;
+                background-color: black;
+                border:3px solid gainsboro;
+            }
+            .close{
+                display:none ;
+            }
+            .switch a{
+                width:70px;
+                height:5px;
+                background-color: whitesmoke;
+                display:inline-block ;
+                border-radius: 3px;
+            }
+            .cont{
+                width: 100vw;
+                display:grid;
+                grid-template-columns: 1fr 4fr;
+                height:100vh;
+
+            }
+            .cont aside{
+                background-color:black;
+                width: 100%;
+                height: 100%;
+                
+            }
+            aside{
+            transition: transfrom 5s ease-in-out;
+            }
+            .cont main{
+                background-color: aquamarine;
+                width:100%;
+                height:100%;
+            }
+            #about:target .cont{
+                display:flex;
+                width:10%;
+            }
+            #about:target aside{
+                display: none;
+            
+            }
+
+        </style>
+    </head>
+    <body>
+        <header id="about">
+            <div class="switch">
+                <a href="#about">about</a> 
+                <a href="#about">about</a> |
+                <a href="#about">about</a> |
+            </div>
+            <nav>
+               <a href="#about">about</a> |
+                <a href="#feature">feature</a> |
+                <a href="#CTA">CTA</a> |
+                <a href="#contact">Contact</a>
+            </nav>
+            <div>
+                <button>Login</button>
+                <button>Register</button>
+            </div>
+        </header>
+        <div class="cont" id="about">
+            <aside></aside>
+            <main></main>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,351 @@
+<html>
+    <head>
+        <title>sidebar</title>
+========================= */
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 20px;
+
+    background-color: bisque;
+
+    position: relative;
+}
+
+
+/* =========================
+   HIDE CHECKBOX
+========================= */
+
+#toggle {
+    display: none;
+}
+
+
+/* =========================
+   HAMBURGER / CLOSE BUTTON
+========================= */
+
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+.switch {
+    height: 60px;
+    width: 60px;
+
+    background-color: black;
+    border: 3px solid gainsboro;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 6px;
+    cursor: pointer;
+
+    border-radius: 5px;
+}
+
+.switch span {
+    width: 40px;
+    height: 5px;
+
+    background-color: whitesmoke;
+
+    border-radius: 3px;
+}
+
+.close {
+    display: none;
+}
+
+
+/* =========================
+   TOGGLE
+========================= */
+
+#toggle:checked ~ header .hamburger {
+    display: none;
+}
+
+#toggle:checked ~ header .close {
+    display: flex;
+}
+
+
+/* =========================
+   TOP NAVIGATION
+========================= */
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: darkred;
+}
+
+
+/* =========================
+   LOGIN / REGISTER
+========================= */
+
+.auth button {
+    padding: 10px 18px;
+    margin-left: 5px;
+
+    border: none;
+
+    background-color: black;
+    color: white;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+}
+
+.auth button:hover {
+    background-color: #333;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.cont {
+    display: flex;
+
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+aside {
+    width: 30%;
+    height: 100%;
+
+    background-color: black;
+    color: white;
+
+    padding: 20px;
+
+    transition: width 0.3s ease;
+}
+
+aside h2 {
+    margin-bottom: 20px;
+}
+
+aside a {
+    display: block;
+
+    color: white;
+    text-decoration: none;
+
+    padding: 12px 0;
+}
+
+aside a:hover {
+    color: bisque;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+main {
+    flex: 1;
+
+    height: 100%;
+
+    overflow-y: auto;
+
+    background-color: aquamarine;
+
+    padding: 20px;
+}
+
+
+/* =========================
+   HIDE SIDEBAR
+========================= */
+
+#toggle:checked ~ .cont aside {
+    display: none;
+}
+
+
+/* =========================
+   CONTENT CARDS
+========================= */
+
+section {
+    min-height: 400px;
+
+    padding: 30px;
+    margin-bottom: 20px;
+
+    background-color: white;
+
+    border-radius: 10px;
+}
+
+section h2 {
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+section button {
+    margin-top: 10px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        height: 80px;
+        padding: 10px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .cont {
+        height: calc(100vh - 80px);
+    }
+
+    aside {
+        width: 60%;
+    }
+
+    .switch {
+        height: 50px;
+        width: 50px;
+    }
+
+    .switch span {
+        width: 30px;
+    }
+
+    .auth button {
+        padding: 8px 10px;
+    }
+
+    section {
+        min-height: 300px;
+        padding: 20px;
+    }
+}
+</style>
+
+    </head>
+    <body>
+        <input type="checkbox" id="toggle">
+        <header>
+            <div class="menu-container">
+                <label for="toggle" class="switch hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </label>
+                <label for="toggle" class="switch close">
+                    <span></span>
+                    <span></span> 
+                    <span></span>  
+                </label>
+            </div>
+            <nav>
+                <a href="#about">about</a>
+                <a href="#feature">feature</a>
+                <a href="#CTA">CTA</a>
+                <a href="#contact">Contact</a>
+                <div class="auth">
+                    <a href="#login">Login</a>
+                    <a href="#register">Register</a>
+                </div>
+            </nav>
+        </header>
+        <div class="cont">
+            <aside>
+                <h2>sidebar menu</h2>
+                <a href="#about">about</a>
+                <a href="#feature">feature</a>
+                <a href="#cta">cta</a>
+                <a href="#contact">contact</a>
+            </aside>
+            <main>
+                <section id="about">
+                    <h2>About</h2>
+                    <p>Welcome to our website.
+                    This section provides information
+                    about our organization and its objectives.</p>
+                    <section id="feature">
+                        <h2>Features</h2>
+                        <p>Explore the features of our platform.
+                        We offer a range of tools and services
+                        to enhance your experience.</p>
+                        <section id="cta">
+                            <h2>Call to Action</h2>
+                            <p>Take action now! Sign up for our newsletter
+                            or get started with our services today.</p>
+                            <section id="contact">
+                                <h2>Contact Us</h2>
+                                <p>If you have any questions or need assistance,
+                                please reach out to us through our contact form
+                                or email us directly.</p>
+                                <button>Get started</button>
+                            </section>
+            </main>
+        </div>
+    </body>
+</html>

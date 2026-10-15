@@ -1,13 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link src="app.js"><link>
-</head>
-<body>
-    <h1 style="color:brown">Hi i am Ekansh Garg learning JAVASCRIPT</h1>
-    <link src="app.js"><link>
-</body>
+<html>
+    <head>
+        <title>fibonacci series</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        //if else
+        if(true){
+            console.log('hello');
+        }
+        if(false){
+            console.log('hello');
+        }
+        else{
+            console.log('bye');
+        }
+        var num = parseInt(prompt("Enter your marks"));
+        if(num>=80){
+            console.log('A+');
+        }
+        else if(num>=60){
+            console.log('b+');
+        }
+        else{
+            console.log('fail');
+        }
+        //switch case
+        var str='tues';
+        switch(str){
+            case 'mon':
+                console.log("monday");
+                break;
+            case 'tues':
+                console.log("tuesday");
+                break;
+            case 'wed':
+                console.log("wednesday");
+                break;
+            default:
+                console.log("not a valid day");
+        }
+        //ternary operator
+        var ter=(5==="5") ? 10 :50 ;
+        console.log(ter);
+        //for loop
+        for(let i=0;i<5;i++){
+            console.log("for loop:"+i);
+        }
+        //while loop
+        let n = 506 ;
+        while(n>0){
+            console.log("while loop:"+n%10);
+            n=Math.floor(n/10);
+        }
+        // do while loop
+        let n2=3 
+        do{
+            console.log("do while loop"+ n2);
+            n2*=3
+        } while(n2<=9)
+
+        // nestesd loop
+        for(let i=0;i<5;i++){
+            for(let j=0;j<3;j++){
+                console.log("nested loop:"+i*j);
+            }
+        }
+    </script>
 </html>
