@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>function</title>
+    </head>
+    <body>
+        <button onclick="RandomNumber">Generate Random Number</button>
+      
+    </body>
+     <script>
+       function RandomNumber(){
+        var number1 = parseInt(prompt("Enter a first number"));
+        var number2 = parseInt(prompt("Enter a second number"));
+        console,log(Math.floor(Math.random()*(Math.max(number1,number2)-Math.min(number1,number2)+1)+Math.min(number1,number2))) ;
+       }
+    </script>
+</html>

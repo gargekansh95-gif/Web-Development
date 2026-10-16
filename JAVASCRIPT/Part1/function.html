@@ -3,7 +3,8 @@
         <title>function</title>
     </head>
     <body>
-
+        <button on click="alert button">Alert</button>
+        <button on click="prompt button">Prompt</button>
     </body>
     <script>
         // STRUCTURE 
@@ -22,6 +23,18 @@
         }
         console.log(SquareRoot(64));
 
-    
+
+        let obj=({...args})=>({
+            "Name":args[0],
+            "Class":args[1]
+        })
+        function greet(name , Class) {
+            console.log(arguments);
+        }
+    // let obj =(nmame , class)=>({
+    //     name ,
+    //     class
+    // })
+   
     </script>
 </html>

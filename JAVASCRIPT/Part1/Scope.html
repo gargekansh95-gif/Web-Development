@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title>Scope</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        "use strict";
+     //1./ Global scope
+        const str = 'name';
+        function showStr(){
+            console.log(str);
+        }
+        showStr();
+
+  //2.  // Function scope
+        function funScope(){
+            var num1=10;
+            const num2 = 20;
+            let num3 = 30;
+            console.log('num1',num1);
+            console.log('num2',num2);
+            console.log('num3',num3);
+        }
+        // funScope();
+        //  console.log('num1',num1);
+        // console.log('num2',num2);
+        // console.log('num3',num3);
+
+  //3.  // Block scope
+        if(true){
+            var x = 'xyz';
+            const y ='yza';
+            let z = 'zab';
+
+            console.log('var ',x);
+            console.log('const ',y);
+            console.log('let ',z);
+               }
+            //  console.log('var ',x);// var can be used inside nad outside the block 
+            // console.log('const ',y);// const can be used only inside the block
+            // console.log('let ',z);// let can be used only inside the block
+
+            //4.  // Lexical scope
+        function outerFun() {
+    var outn1 = 10;
+    const outn2 = 20;
+    let outn3 = 30;
+
+    function innFun() {
+        var inn1 = 50;
+        console.log('lexical scope', outn1);
+        console.log('lexical scope', outn2);
+        console.log('lexical scope', outn3);
+    }
+
+    innFun();
+}
+outerFun();
+
+// 5.  //Baisc closure
+function basicClosure(){
+    const message='Ag performed closure';
+    function innBasicClosure(){
+        console.log(message);
+    }
+    return innBasicClosure;
+}
+var baisc = basicClosure();
+    baisc();
+    // 6.  // Closure closure
+     function counterclosure() {
+        var count = 0;
+
+        function increment() {
+            count++;
+            console.log(count);
+        }
+
+        return increment;
+    }
+
+    const counterFun = counterclosure();
+
+    counterFun();
+    counterFun();
+    counterFun();
+
+
+
+    // IIFE (Immediately Invoked Function Expression)
+
+    // BASIC IIFE
+    (function() {
+        console.log('IIFE');
+    })();
+
+    // IIFE with parameters
+    (function(name,age){
+        console.log({
+        name:name,
+        age:age
+        })
+    })('John', 30);
+
+    // Arrowfunction IIFE
+    ((name,age)=>{
+        console.log({
+        name:name,
+        age:age
+        })
+    })('John', 30);
+
+    // IIFE with privete variables
+    (function() {
+        var ifever=10;
+        console.log('IIFE with private variable',ifever); 
+    })();
+// use strict (it add above script tag) it is used to avoid the use of undeclared variables and it will throw an error if we use undeclared variable
+
+    </script>
+</html>
