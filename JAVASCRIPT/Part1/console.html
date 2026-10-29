@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>console</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        // try and catch
+        try{
+            var a = num ;
+            if(a<18){
+                throw Error('age is less than 18');
+            }
+        }catch(e){
+            console.error('error'); // how to behave in error we can define in catch block.
+        }finally{
+            console.log('finally block'); // finally block will always execute whether there is an error or not.    
+        }   
+    </script>
+</html>
